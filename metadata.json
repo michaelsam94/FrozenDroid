@@ -1,0 +1,6 @@
+{
+  "name": "FrozenDroid",
+  "description": "A high-performance, no-root utility to freeze bloatware using Shizuku or ADB Wi-Fi, featuring modern Material 3 and local persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,418 @@
+[
+  {
+    "packageName": "com.samsung.android.bixby.agent",
+    "appName": "Bixby Voice",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Samsung virtual assistant voice service. Safe to disable if you use Google Assistant or no assistant.",
+    "affectsFeatures": "Bixby Voice command activation"
+  },
+  {
+    "packageName": "com.samsung.android.bixby.wakeup",
+    "appName": "Bixby Wakeup",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Listens for standard 'Hi Bixby' wake word.",
+    "affectsFeatures": "Voice wakeup"
+  },
+  {
+    "packageName": "com.samsung.android.bixby.service",
+    "appName": "Bixby Service",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Background services supporting Bixby.",
+    "affectsFeatures": "Bixby ecosystem integration"
+  },
+  {
+    "packageName": "com.samsung.android.app.routines",
+    "appName": "Bixby Routines",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "Samsung automation routines. Freezing this will stop your custom device schedules and triggers.",
+    "affectsFeatures": "Modes and Routines schedules"
+  },
+  {
+    "packageName": "com.miui.analytics",
+    "appName": "MIUI Analytics",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Xiaomi background analytics tool that tracks device usage behavior and pushes advertisements.",
+    "affectsFeatures": "None"
+  },
+  {
+    "packageName": "com.miui.msa.global",
+    "appName": "MIUI System Ads (MSA)",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Serves advertisements throughout various MIUI stock system applications.",
+    "affectsFeatures": "System ads delivery"
+  },
+  {
+    "packageName": "com.xiaomi.mipicks",
+    "appName": "GetApps (Mi App Store)",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Alternative App Store preloaded on Xiaomi devices. Not needed if using Google Play Store.",
+    "affectsFeatures": "App updates via GetApps"
+  },
+  {
+    "packageName": "com.oppo.market",
+    "appName": "HeyTap App Market",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Oppo custom storefront and app catalog.",
+    "affectsFeatures": "HeyTap app updates"
+  },
+  {
+    "packageName": "com.heytap.browser",
+    "appName": "HeyTap Browser",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Pre-installed Oppo stock browser. Can be fully replaced by Chrome or Firefox.",
+    "affectsFeatures": "Default website links"
+  },
+  {
+    "packageName": "com.android.providers.downloads.ui",
+    "appName": "Downloads App",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "System download shortcut manager UI. Disabling can cause download file navigation issues.",
+    "affectsFeatures": "Downloads UI interface"
+  },
+  {
+    "packageName": "com.facebook.system",
+    "appName": "Facebook App Installer",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Preloaded Facebook stub that silently installs and updates Facebook services background packages.",
+    "affectsFeatures": "Automatic Facebook app updates"
+  },
+  {
+    "packageName": "com.facebook.appmanager",
+    "appName": "Facebook App Manager",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Background service tracking and updating meta-suite apps.",
+    "affectsFeatures": "Facebook features management"
+  },
+  {
+    "packageName": "com.facebook.services",
+    "appName": "Facebook Services",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Telemetry and sync services related to Facebook integrations.",
+    "affectsFeatures": "Background account syncing"
+  },
+  {
+    "packageName": "com.samsung.android.game.gamehome",
+    "appName": "Game Launcher",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Samsung utility that aggregates and catalogs installed games.",
+    "affectsFeatures": "Game organization dashboard"
+  },
+  {
+    "packageName": "com.samsung.android.game.gamestate",
+    "appName": "Game Optimizing Service",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "Alters screen resolution and CPU profiles during gameplay; freezing may increase raw power but cause thermal throttling.",
+    "affectsFeatures": "Game thermal and battery management"
+  },
+  {
+    "packageName": "com.sec.android.app.sbrowser",
+    "appName": "Samsung Internet",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Samsung customized web browser. Users preferring Chrome/Brave can safely freeze it.",
+    "affectsFeatures": "Web browsing defaults"
+  },
+  {
+    "packageName": "com.samsung.android.kidsinstaller",
+    "appName": "Samsung Kids Installer",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Stub downloader and config tool for Samsung Kids digital playground workspace.",
+    "affectsFeatures": "Kids mode launcher"
+  },
+  {
+    "packageName": "com.sec.android.easyMover",
+    "appName": "Smart Switch",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Data migration utility to copy files to or from other Android devices.",
+    "affectsFeatures": "Device migration features"
+  },
+  {
+    "packageName": "com.samsung.android.spay",
+    "appName": "Samsung Pay / Wallet",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "Samsung contactless wallet app. Freezing disables NFC payments and stored transit files.",
+    "affectsFeatures": "Contactless card payments"
+  },
+  {
+    "packageName": "com.samsung.android.fido.asm",
+    "appName": "Samsung FIDO Client",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "Underpins hardware biometric authentication for web login integrations.",
+    "affectsFeatures": "Fingerprint logins on websites"
+  },
+  {
+    "packageName": "com.miui.core",
+    "appName": "MIUI Core",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "Core framework library for proprietary Xiaomi MIUI interface layers. Freezing will result in boot loops.",
+    "affectsFeatures": "All device user experiences"
+  },
+  {
+    "packageName": "com.android.systemui",
+    "appName": "System UI",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "Controls crucial visual features like navigation bars, multitasking, status bar, and ambient screen. Must never be disabled.",
+    "affectsFeatures": "All Android navigation and display"
+  },
+  {
+    "packageName": "com.android.phone",
+    "appName": "Phone Services (Dialer Core)",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "Handles cellular connection, baseband telemetry, calls dispatch, and SMS handling. Defreezing causes immediate network drop.",
+    "affectsFeatures": "Cellular network calls and SMS"
+  },
+  {
+    "packageName": "com.android.settings",
+    "appName": "Settings",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "Device system settings dashboard. Freezing locks the phone into soft brick mode.",
+    "affectsFeatures": "All device settings"
+  },
+  {
+    "packageName": "com.android.emergency",
+    "appName": "Emergency SOS",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "Dispatches critical GPS data and calling signals to emergency dispatchers. Must never be disabled.",
+    "affectsFeatures": "Emergency calling and tracking"
+  },
+  {
+    "packageName": "com.google.android.packageinstaller",
+    "appName": "Android Package Installer",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "Underpins all application installs, permissions allocation, and APK side-loads.",
+    "affectsFeatures": "App installations and rights allocation"
+  },
+  {
+    "packageName": "com.google.android.gms",
+    "appName": "Google Play Services",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "Deeply integrated services mapping push notifications, location protocols, safety check maps, and backup syncing.",
+    "affectsFeatures": "App notifications and location APIs"
+  },
+  {
+    "packageName": "com.android.printspooler",
+    "appName": "Print Spooler",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Manages system printing queues and local network printer handshakes.",
+    "affectsFeatures": "Direct device-to-printer pipelines"
+  },
+  {
+    "packageName": "com.netflix.mediaclient",
+    "appName": "Netflix Stub",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Common factory-installed non-removable stub configuration of the Netflix media streaming player.",
+    "affectsFeatures": "Netflix media player availability"
+  },
+  {
+    "packageName": "com.microsoft.officelens",
+    "appName": "Office Lens Stub",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Preloaded scanning utility loaded by specific carrier agreements.",
+    "affectsFeatures": "Microsoft ecosystem scanning"
+  },
+  {
+    "packageName": "com.samsung.android.mateagent",
+    "appName": "Samsung Galaxy Friends",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Downloads interactive dynamic wallpaper themes and content when physical Samsung accessories are attached.",
+    "affectsFeatures": "NFC Accessory Themes"
+  },
+  {
+    "packageName": "com.samsung.android.bixbyvision.framework",
+    "appName": "Bixby Vision Core",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Augmented reality camera tool for translation and OCR built inside Samsung Gallery/Camera.",
+    "affectsFeatures": "Bixby Vision search and AR translations"
+  },
+  {
+    "packageName": "com.google.android.apps.tachyon",
+    "appName": "Google Duo / Meet",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Pre-installed video calling package. Can be safely disabled if unused.",
+    "affectsFeatures": "Google Meet video calls"
+  },
+  {
+    "packageName": "com.google.android.youtube",
+    "appName": "YouTube",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Google stock video viewer. Can be disabled or frozen if using web client.",
+    "affectsFeatures": "YouTube app access"
+  },
+  {
+    "packageName": "com.amazon.mShop.android.shopping",
+    "appName": "Amazon Shopping Stub",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Carrier-partnered preloaded shopping application package stub.",
+    "affectsFeatures": "Direct Amazon shortcut app"
+  },
+  {
+    "packageName": "com.sec.android.app.billing",
+    "appName": "Samsung In-App Purchase",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "Processes payments for premium add-ons inside apps installed from the Galaxy Store.",
+    "affectsFeatures": "Galaxy Store inside purchases"
+  },
+  {
+    "packageName": "com.samsung.android.scs",
+    "appName": "Samsung Core Services",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "Delivers visual searching, local search indexing and machine learning text prediction.",
+    "affectsFeatures": "Predictive text and Gallery indexings"
+  },
+  {
+    "packageName": "com.samsung.android.stickercenter",
+    "appName": "Sticker Center",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Catalogues custom stickers for integration in the Samsung keyboard and message suite.",
+    "affectsFeatures": "Keyboard sticker menus"
+  },
+  {
+    "packageName": "com.sec.android.daemonapp",
+    "appName": "Samsung Weather",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Default widget and weather tracker app background sync engine.",
+    "affectsFeatures": "Homescreen weather widget updates"
+  },
+  {
+    "packageName": "com.samsung.android.mdx",
+    "appName": "Samsung Media Receiver",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Underpins screen mirroring features linked directly to smart home appliances.",
+    "affectsFeatures": "SmartView TV casting"
+  },
+  {
+    "packageName": "com.mygalaxy",
+    "appName": "My Galaxy App",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Promo client preloaded in specific South Asian regions by Samsung.",
+    "affectsFeatures": "Promotional offers dashboard"
+  },
+  {
+    "packageName": "com.sec.android.cover.ledcover",
+    "appName": "LED Cover Service",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Controls LED flash displays on protective smart hardware cases.",
+    "affectsFeatures": "LED backplate notifications"
+  },
+  {
+    "packageName": "com.samsung.android.email.provider",
+    "appName": "Samsung Email",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Stock client email provider. Fully safe to prune if using Gmail or Outlook.",
+    "affectsFeatures": "Samsung client emails"
+  },
+  {
+    "packageName": "com.samsung.android.dialer",
+    "appName": "Samsung Contacts & Dialer UI",
+    "carrier": "Universal",
+    "safetyLevel": "DANGEROUS",
+    "reason": "System phonebook dialer UI application wrapper. Disabling causes system crashes during call triggers.",
+    "affectsFeatures": "System keypad calls"
+  },
+  {
+    "packageName": "com.mi.health",
+    "appName": "Mi Health",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Xiaomi proprietary movement metrics tracer. Fully replaceable by Google Fit.",
+    "affectsFeatures": "Xiaomi fit-tracking"
+  },
+  {
+    "packageName": "com.miui.player",
+    "appName": "Mi Music",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Preloaded MIUI offline audio listener. Users can replace it with VLC or YT Music.",
+    "affectsFeatures": "Stock audio playbacks"
+  },
+  {
+    "packageName": "com.miui.videoplayer",
+    "appName": "Mi Video",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Xiaomi generic media video stream aggregator with integrated ads.",
+    "affectsFeatures": "Stock MP4 playbacks"
+  },
+  {
+    "packageName": "com.miui.bugreport",
+    "appName": "Mi Bug Report",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Diagnostic crash log capture reporting to Xiaomi servers.",
+    "affectsFeatures": "Developer crash sending"
+  },
+  {
+    "packageName": "com.oppo.book",
+    "appName": "Oppo Reader Store",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Proprietary book browser catalog and launcher loaded in ColorOS.",
+    "affectsFeatures": "ColorOS e-books shopping"
+  },
+  {
+    "packageName": "com.coloros.gamespace",
+    "appName": "ColorOS Game Space",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Aggregates Oppo mobile games, overrides system settings for gamer tuning.",
+    "affectsFeatures": "Oppo gamer profiles"
+  },
+  {
+    "packageName": "com.coloros.compass",
+    "appName": "ColorOS Compass",
+    "carrier": "Universal",
+    "safetyLevel": "SAFE",
+    "reason": "Default navigation compass hardware reader tool.",
+    "affectsFeatures": "Oppo Compass directional widget"
+  },
+  {
+    "packageName": "com.quicinc.voice.activation",
+    "appName": "Qualcomm Voice Assist",
+    "carrier": "Universal",
+    "safetyLevel": "CAUTION",
+    "reason": "Hardware level companion listening for wake-up sounds on Qualcomm chipsets.",
+    "affectsFeatures": "Hardware hotwords matching"
+  }
+]
