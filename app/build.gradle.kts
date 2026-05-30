@@ -1,5 +1,8 @@
+import java.util.Properties
+
 plugins {
   alias(libs.plugins.android.application)
+  alias(libs.plugins.kotlin.android)
   alias(libs.plugins.kotlin.compose)
   alias(libs.plugins.google.devtools.ksp)
   alias(libs.plugins.roborazzi)
@@ -7,12 +10,19 @@ plugins {
   alias(libs.plugins.hilt.android)
 }
 
+if (gradle.startParameter.taskNames.any {
+    it.equals("generatePlayStoreAssets", ignoreCase = true) ||
+      it.contains("Roborazzi", ignoreCase = true)
+  }) {
+  extra["screenshot"] = true
+}
+
 android {
-  namespace = "com.example"
+  namespace = "com.michael.frozendroid"
   compileSdk { version = release(36) { minorApiLevel = 1 } }
 
   defaultConfig {
-    applicationId = "com.aistudio.frozendroid.xbcrzm"
+    applicationId = "com.michael.frozendroid"
     minSdk = 24
     targetSdk = 36
     versionCode = 1
@@ -23,11 +33,22 @@ android {
 
   signingConfigs {
     create("release") {
-      val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks"
-      storeFile = file(keystorePath)
+      val keystoreProperties = Properties()
+      val keystorePropertiesFile = rootProject.file("key.properties")
+      if (keystorePropertiesFile.exists()) {
+        keystorePropertiesFile.inputStream().use { keystoreProperties.load(it) }
+      }
+      val keystorePath = System.getenv("KEYSTORE_PATH")
+        ?: keystoreProperties["storeFile"] as String?
+        ?: "my-upload-key.jks"
+      storeFile = rootProject.file(keystorePath)
       storePassword = System.getenv("STORE_PASSWORD")
-      keyAlias = "upload"
+        ?: keystoreProperties["storePassword"] as String?
+      keyAlias = System.getenv("KEY_ALIAS")
+        ?: keystoreProperties["keyAlias"] as String?
+        ?: "upload"
       keyPassword = System.getenv("KEY_PASSWORD")
+        ?: keystoreProperties["keyPassword"] as String?
     }
     create("debugConfig") {
       storeFile = file("${rootDir}/debug.keystore")
@@ -57,7 +78,33 @@ android {
     buildConfig = true
     aidl = true
   }
-  testOptions { unitTests { isIncludeAndroidResources = true } }
+  testOptions {
+    unitTests {
+      isIncludeAndroidResources = true
+      all {
+        val screenshotTests = project.hasProperty("screenshot")
+        it.inputs.property("screenshotTestsEnabled", screenshotTests)
+        if (screenshotTests) {
+          it.maxParallelForks = 1
+          it.maxHeapSize = "2048m"
+          it.systemProperty("robolectric.pixelCopyRenderMode", "hardware")
+        }
+        it.useJUnit {
+          if (screenshotTests) {
+            includeCategories("com.michael.frozendroid.playstore.PlayStoreScreenshotTests")
+          } else {
+            excludeCategories("com.michael.frozendroid.playstore.PlayStoreScreenshotTests")
+          }
+        }
+      }
+    }
+  }
+}
+
+kotlin {
+  compilerOptions {
+    jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+  }
 }
 
 // Configure the Secrets Gradle Plugin to use .env and .env.example files
@@ -65,6 +112,16 @@ android {
 secrets {
   propertiesFileName = ".env"
   defaultPropertiesFileName = ".env.example"
+}
+
+roborazzi {
+  outputDir.set(file("${rootProject.projectDir}/play-store"))
+}
+
+tasks.register("generatePlayStoreAssets") {
+  group = "publishing"
+  description = "Generate Play Store screenshots and feature graphic via Roborazzi"
+  dependsOn("recordRoborazziDebug")
 }
 
 // Some unused dependencies are commented out below instead of being removed.
@@ -123,5 +180,7 @@ dependencies {
   implementation(libs.hilt.android)
   implementation(libs.androidx.hilt.work)
   implementation(libs.androidx.hilt.navigation.compose)
+  implementation(libs.shizuku.api)
+  implementation(libs.shizuku.provider)
   "ksp"(libs.hilt.compiler)
 }
